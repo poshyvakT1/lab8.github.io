@@ -1,0 +1,291 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+}
+
+.nav-icons a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.nav-icons.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f0f8ff;
+    padding: 10px;
+    z-index: 1;
+}
+
+.nav-icons.show a {
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.carousel-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators span.active {
+    background-color: #333;
+}
+
+.large-images,
+.medium-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.large-images img,
+.medium-images img {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.large-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.large-images img {
+    margin-bottom: 0;
+}
+
+.medium-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.medium-images img {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .nav-icons {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-slides img {
+        height: 200px;
+    }
+
+    .large-images {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .medium-images {
+        display: none;
+    }
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicators span.active {
+    background-color: #333;
+}
+
+.large-images,
+.medium-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.large-images img,
+.medium-images img {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.large-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.large-images img {
+    margin-bottom: 0;
+}
+
+.medium-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.medium-images img {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .nav-icons {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 200px;
+    }
+
+    .large-images {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .medium-images {
+        display: none;
+    }
+}
